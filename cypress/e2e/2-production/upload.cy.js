@@ -13,9 +13,9 @@ describe('upload', function(){
 
         //cy.get(".input-field_errrMessage__BO92z").should("have.text","( Case Sensitive )Incorrect password");
         
-        cy.wait(20000);//FOR LOADING
+        cy.wait(2000);//FOR LOADING
         cy.get(".header_uploadButtonHover__3sVV1").click();//UPLOAD
-        cy.wait(20000);
+        cy.wait(2000);
         cy.get(".upload-modal_addFilesSectionButton__5UEPl").click();//video
         cy.wait(4000);
         cy.get("#video-file").click();
