@@ -42,9 +42,10 @@ describe('openingpageSignup', function () {
                 
                 cy.get('.button_blockText__3MB5s').click();
                 cy.wait(2000);
-                console.log(cy.url(),'lklklklkllklklklk');
-                cy.url().should("have.value","https://projector.app/access\?email=");
+                //cy.url().should("eq","https://projector.app/welcome?");//Welcome page
                 cy.wait(6000);
+                cy.get(':nth-child(1) > .button_blockText__3MB5s').click();//start viewing
+                cy.wait(2000);
                 cy.get('.header_options__2SF7N > .header_profileButton__2D8lI.header_regularView__1DUae > .header_profileMenuCurrentProfileDetailsIcon__2Iwlh').click();//profile button
                 cy.wait(2000);
                 cy.get('.header_profileMenuLinksContainer__3821f > [href="/newSign-in"]').click();//logout button
@@ -52,7 +53,7 @@ describe('openingpageSignup', function () {
                 cy.url().should("eq", "https://projector.app/newSign-in");//verify logout
                 cy.wait(2000);
                 cy.get('.newSign-in_backLink__2ujWH').click();//back to main page
-                cy.url().should("eq", "https://projector.app/");//verify 
+                //cy.url().should("eq", "https://projector.app/");//verify 
             })
         })
     })

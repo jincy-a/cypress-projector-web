@@ -8,7 +8,7 @@ describe('upload', function(){
         cy.url().should("eq","https://projector.app/newSign-in");
         cy.get(".input-field_inputField__3cdaW").type("layne@projector.app").should("have.value","layne@projector.app");//LOGIN
         cy.get(".button_blockText__3MB5s").click();
-        cy.get("#password-input").type("Projectorapp@202");
+        cy.get("#password-input").type("Projectorapp@2022");
         cy.get("#sasdasddd").click();
 
         //cy.get(".input-field_errrMessage__BO92z").should("have.text","( Case Sensitive )Incorrect password");
